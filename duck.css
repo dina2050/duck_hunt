@@ -1,0 +1,13 @@
+#gamezone {
+    border: 1px solid black;
+    width: 550px;
+    height: 450px;
+    margin: auto;
+    position: relative;
+}
+.duck {
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+}
