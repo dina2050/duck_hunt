@@ -6,8 +6,37 @@
     position: relative;
 }
 .duck {
-    border: 1px solid black;
-    width: 30px;
-    height: 30px;
+    /* border: 1px solid black; */
+    width: 50px;
+    height: 50px;
     position: absolute;
+    background-image: url("duck.png");
 }
+
+.img {
+    background-image:url("310674.jpg");
+   width: 550px;
+   height: 450px;
+   background-size:cover;
+}
+
+.dog {
+    background-image:url("dog.png");
+    background-size:cover;
+    width:93px;
+    height:60px;
+    position:absolute;
+    bottom: 11em;
+    left: 15em;
+    display: none;
+}
+
+#current {
+    border: 1px solid black;
+    position: absolute;
+    bottom:1em;
+    left:2em;
+    width:50px;
+    height:30px;
+}
+

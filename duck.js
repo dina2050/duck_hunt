@@ -1,6 +1,20 @@
 var div = document.createElement("div");
 document.body.appendChild(div);
 div.id = "gamezone";
+var img = document.createElement("img");
+img.className="img";
+gamezone.appendChild(img);
+var dog =document.createElement("div");
+dog.className="dog";
+gamezone.appendChild(dog);
+var score = document.createElement("label");
+div.appendChild(score);
+score.id = "current";
+score.innerHTML = "0";
+count = score.innerHTML;
+click1=null;
+click2=null;
+
 ducks = document.getElementsByClassName("duck");
 
 function createDuck() {
@@ -12,7 +26,7 @@ function createDuck() {
 
 function setRandomPosition(duck) {
     posX = Math.random() * 520
-    posY = Math.random() * 420
+    posY = Math.random() * 250
     duck.style.top = posY + "px"
     duck.style.left = posX + "px"
 };
@@ -34,8 +48,19 @@ function move() {
 setInterval(move, 1000)
 
 function killduck(event) {
-    this.remove();
-    var duckElement = createDuck();
-    setRandomPosition(duckElement);
-    duckElement.addEventListener("click", killduck);
-};
+    
+        this.remove();
+        count++
+        score.innerHTML = count;
+        
+        if (count%2 == 0) {
+            dog.style.display = "block";
+            setTimeout(hideDog,1000)
+        }
+        var duckElement = createDuck();
+        setRandomPosition(duckElement);
+        duckElement.addEventListener("click", killduck);
+    };
+                function hideDog() {
+                    dog.style.display="none"
+                } 
